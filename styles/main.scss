@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "partial";
+
+h1 {
+    font-family: $antonio-font;
+}
+
+p {
+    font-family: $spartan-reg, sans-serif;
+    font-size: 5rem;
+}
+
+.test2 {
+    font-family: $spartan-bold, sans-serif;
+    font-size: 7rem;;
+}
+
+
