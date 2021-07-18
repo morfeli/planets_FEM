@@ -178,17 +178,23 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 // MOBILE CALL TO ACTION BUTTONS
 
 .mobile__CTA {
-  margin-top: 2rem;
-  display: flex;
+  text-align: center;
   width: 100%;
-  justify-content: space-around;
-
+  border-bottom: 1px solid #979797;
   &--btn {
+    margin-top: 1rem;
     background: transparent;
     color: #979797;
     font-family: $spartan-bold, sans-serif;
+    font-size: 9px;
     letter-spacing: 2px;
     width: 100px;
     border: none;
   }
+}
+
+.active {
+  color: white;
+  border-bottom: 5px solid $purple;
+  padding-bottom: 1rem;
 }

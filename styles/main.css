@@ -212,21 +212,25 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 }
 
 .mobile__CTA {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  border-bottom: 1px solid #979797;
 }
 
 .mobile__CTA--btn {
+  margin-top: 1rem;
   background: transparent;
   color: #979797;
   font-family: "Spartan Bold", sans-serif;
+  font-size: 9px;
   letter-spacing: 2px;
   width: 100px;
   border: none;
+}
+
+.active {
+  color: white;
+  border-bottom: 5px solid #6d2ed5;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
