@@ -174,3 +174,21 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 }
 
 //  NAV BAR STYLES - END
+
+// MOBILE CALL TO ACTION BUTTONS
+
+.mobile__CTA {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  &--btn {
+    background: transparent;
+    color: #979797;
+    font-family: $spartan-bold, sans-serif;
+    letter-spacing: 2px;
+    width: 100px;
+    border: none;
+  }
+}
