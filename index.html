@@ -22,14 +22,14 @@
 
         <div class="navbar__links">
           <ul class="navbank__links--ul">
-            <li class="navbank__links--li">Mercury</li>
-            <li class="navbank__links--li">Venus</li>
-            <li class="navbank__links--li">Earth</li>
-            <li class="navbank__links--li">Mars</li>
-            <li class="navbank__links--li">Jupiter</li>
-            <li class="navbank__links--li">Saturn</li>
-            <li class="navbank__links--li">Uranus</li>
-            <li class="navbank__links--li">Neptune</li>
+            <li id="mercury" class="navbank__links--li">Mercury</li>
+            <li id="venus" class="navbank__links--li">Venus</li>
+            <li id="earth" class="navbank__links--li">Earth</li>
+            <li id="mars" class="navbank__links--li">Mars</li>
+            <li id="jupiter" class="navbank__links--li">Jupiter</li>
+            <li id="saturn" class="navbank__links--li">Saturn</li>
+            <li id="uranus" class="navbank__links--li">Uranus</li>
+            <li id="neptune" class="navbank__links--li">Neptune</li>
           </ul>
         </div>
       </nav>
@@ -43,6 +43,52 @@
         <button id="surface-btn" class="mobile__CTA--btn">SURFACE</button>
       </div>
     </section>
+    <main class="main__container">
+      <section class="image-container">
+        <img
+          id="planet-img"
+          class="planet-img"
+          src="./assets/planet-earth.svg"
+          alt="planet"
+        />
+      </section>
+      <section class="main-content">
+        <h1 id="planet-name" class="planet-name">Earth</h1>
+        <p id="planet-description" class="planet-description">
+          Third planet from the Sun and the only known planet to harbor life.
+          About 29.2% of Earth's surface is land with remaining 70.8% is covered
+          with water. Earth's distance from the Sun, physical properties and
+          geological history have allowed life to evolve and thrive.
+        </p>
+        <p class="wiki-source">
+          Source:
+          <a
+            id="wiki-source"
+            class="wiki-a"
+            href="https://en.wikipedia.org/wiki/Earth#Surface"
+            >Wikipedia</a
+          >
+        </p>
+      </section>
+      <section class="info-content">
+        <div class="info-div">
+          <span class="span-style">ROTATION TIME</span>
+          <p id="rotate-time" class="info-style">0.99 Days</p>
+        </div>
+        <div class="info-div">
+          <span class="span-style">REVOLUTION TIME</span>
+          <p id="revolution-time" class="info-style">365.26 Days</p>
+        </div>
+        <div class="info-div">
+          <span class="span-style">RADIUS</span>
+          <p id="radius-time" class="info-style">6,371 KM</p>
+        </div>
+        <div class="info-div">
+          <span class="span-style">AVERAGE TEMP</span>
+          <p id="average-time" class="info-style">16°c</p>
+        </div>
+      </section>
+    </main>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

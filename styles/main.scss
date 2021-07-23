@@ -199,3 +199,86 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   border-bottom: 5px solid $purple;
   padding-bottom: 1rem;
 }
+
+//  MOBILE CALL TO ACTION -END
+
+// PLANET IMAGE STYLING - START
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.planet-img {
+  width: 173px;
+  height: 173px;
+}
+
+.planet-name {
+  font-family: $antonio-font;
+  font-size: 2.5rem;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.planet-description {
+  font-family: $spartan-reg, sans-serif;
+  font-size: 11px;
+  line-height: 22px;
+  color: $white;
+  text-align: center;
+  width: 327px;
+}
+
+.wiki-source {
+  font-family: $spartan-reg, sans-serif;
+  font-size: 12px;
+  color: hsl(0, 0, 50%);
+}
+
+.wiki-a {
+  font-family: $spartan-bold, sans-serif;
+  font-size: 12px;
+  color: hsl(0, 0, 50%);
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 327px;
+  height: 216px;
+  margin: 0 auto;
+}
+
+.info-div {
+  display: flex;
+  width: 327px;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(0, 0, 50%);
+}
+
+.info-style {
+  font-family: $antonio-font;
+  color: $white;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.span-style {
+  font-family: $spartan-bold, sans-serif;
+  font-size: 8px;
+  color: hsl(0, 0, 50%);
+  letter-spacing: 0.73px;
+}
