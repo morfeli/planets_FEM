@@ -28,20 +28,7 @@ callToActionBtns.forEach((btn) => {
   });
 });
 
-// function readJsonFile(file) {
-//   fetch(file)
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }
-
-function fetchData() {
+function fetchData(cursor = 3) {
   fetch(file)
     .then((response) => {
       if (!response.ok) {
@@ -50,17 +37,71 @@ function fetchData() {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      var dataInfo = data;
+      console.log(dataInfo);
+      planetImg.src = dataInfo[cursor].images.planet;
+      planetName.innerHTML = dataInfo[cursor].name;
+      planetDesc.innerHTML = dataInfo[cursor].overview.content;
+      wikiSource.href = dataInfo[cursor].overview.source;
+      rotateTime.innerHTML = dataInfo[cursor].rotation;
+      revolutionTime.innerHTML = dataInfo[cursor].revolution;
+      radiusTime.innerHTML = dataInfo[cursor].radius;
+      averageTime.innerHTML = dataInfo[cursor].temperature;
     })
     .catch((err) => {
       console.log(err);
     });
 }
 
-fetchData();
+// fetchData();
 
-// readJsonFile(file);
-
-// nav.addEventListener("click", (e) => {
-//   readJsonFile(file);
-// });
+nav.addEventListener("click", (e) => {
+  fetchData();
+  let cursor = 0;
+  let planetImg,
+    planetName,
+    planetDesc,
+    wikiSource,
+    rotateTime,
+    revolutionTime,
+    radiusTime,
+    averageTime;
+  switch (e.target.textContext) {
+    case "MERCURY":
+      cursor = 0;
+      break;
+    case "VENUS":
+      cursor = 1;
+      break;
+    case "EARTH":
+      cursor = 2;
+      break;
+    case "MARS":
+      cursor = 3;
+      break;
+    case "JUPITER":
+      cursor = 4;
+      break;
+    case "SATURN":
+      cursor = 5;
+      break;
+    case "URANUS":
+      cursor = 6;
+      break;
+    case "NEPTUNE":
+      cursor = 7;
+      break;
+    default:
+      cursor = -1;
+  }
+  if (cursor >= 0) {
+    planetImg = dataInfo[cursor].images.planet;
+    planetName = dataInfo[cursor].name;
+    planetDesc = dataInfo[cursor].overview.content;
+    wikiSource = dataInfo[cursor].overview.source;
+    rotateTime = dataInfo[cursor].rotation;
+    revolutionTime = dataInfo[cursor].revolution;
+    radiusTime = dataInfo[cursor].radius;
+    averageTime = dataInfo[cursor].temperature;
+  }
+});
