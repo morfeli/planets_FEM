@@ -15,6 +15,12 @@ let revolutionTime = document.getElementById("revolution-time");
 let radiusTime = document.getElementById("radius-time");
 let averageTime = document.getElementById("average-time");
 
+// Capture Data JSON File
+let file = "../data/data.json";
+
+// Capture Planets Nav Link
+let nav = document.getElementById("nav");
+
 callToActionBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     callToActionBtns.forEach((el) => el.classList.remove("active"));
@@ -22,7 +28,39 @@ callToActionBtns.forEach((btn) => {
   });
 });
 
-fetch("../data/data.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.log(error));
+// function readJsonFile(file) {
+//   fetch(file)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// }
+
+function fetchData() {
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+
+fetchData();
+
+// readJsonFile(file);
+
+// nav.addEventListener("click", (e) => {
+//   readJsonFile(file);
+// });
