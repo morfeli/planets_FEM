@@ -7,6 +7,7 @@ const surfaceBtn = document.getElementById("surface-btn");
 
 // Capture Planet Value IDS
 let planetImg = document.getElementById("planet-img");
+let planetImgGeo = document.getElementById("geo-img");
 let planetName = document.getElementById("planet-name");
 let planetDesc = document.getElementById("planet-description");
 let wikiSource = document.getElementById("wiki-source");
@@ -15,11 +16,7 @@ let revolutionTime = document.getElementById("revolution-time");
 let radiusTime = document.getElementById("radius-time");
 let averageTime = document.getElementById("average-time");
 
-// Capture Data JSON File
-
 // Capture Planets Nav Link
-let nav = document.getElementById("nav");
-
 const mercuryBtn = document.getElementById("mercury");
 const venusBtn = document.getElementById("venus");
 const earthBtn = document.getElementById("earth");
@@ -37,32 +34,6 @@ callToActionBtns.forEach((btn) => {
 });
 
 let file = "../data/data.json";
-// function fetchData(cursor) {
-//   fetch(file)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error("ERROR");
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       var dataInfo = data;
-//       console.log(dataInfo);
-//       planetImg.src = dataInfo[cursor].images.planet;
-//       planetName.innerHTML = dataInfo[cursor].name;
-//       planetDesc.innerHTML = dataInfo[cursor].overview.content;
-//       wikiSource.href = dataInfo[cursor].overview.source;
-//       rotateTime.innerHTML = dataInfo[cursor].rotation;
-//       revolutionTime.innerHTML = dataInfo[cursor].revolution;
-//       radiusTime.innerHTML = dataInfo[cursor].radius;
-//       averageTime.innerHTML = dataInfo[cursor].temperature;
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }
-
-// fetchData();
 
 mercuryBtn.addEventListener("click", () => {
   fetch(file)
@@ -74,7 +45,7 @@ mercuryBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[0].images.planet;
       planetName.innerHTML = dataInfo[0].name;
       planetDesc.innerHTML = dataInfo[0].overview.content;
@@ -84,6 +55,28 @@ mercuryBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[0].radius;
       averageTime.innerHTML = dataInfo[0].temperature;
     });
+  structureBtn.addEventListener("click", (e) => {
+    if ((planetName.innerHTML = "Mercury" && e.target)) {
+      fetch(file)
+        .then((response) => {
+          if (!response.ok) {
+            throw Error("Error");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          let dataInfo = data;
+          planetImg.src = dataInfo[0].images.internal;
+          planetName.innerHTML = dataInfo[0].name;
+          planetDesc.innerHTML = dataInfo[0].structure.content;
+          wikiSource.href = dataInfo[0].structure.source;
+          rotateTime.innerHTML = dataInfo[0].rotation;
+          revolutionTime.innerHTML = dataInfo[0].revolution;
+          radiusTime.innerHTML = dataInfo[0].radius;
+          averageTime.innerHTML = dataInfo[0].temperature;
+        });
+    }
+  });
 });
 
 venusBtn.addEventListener("click", () => {
@@ -96,7 +89,7 @@ venusBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[1].images.planet;
       planetName.innerHTML = dataInfo[1].name;
       planetDesc.innerHTML = dataInfo[1].overview.content;
@@ -118,7 +111,7 @@ earthBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[2].images.planet;
       planetName.innerHTML = dataInfo[2].name;
       planetDesc.innerHTML = dataInfo[2].overview.content;
@@ -140,7 +133,7 @@ marsBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[3].images.planet;
       planetName.innerHTML = dataInfo[3].name;
       planetDesc.innerHTML = dataInfo[3].overview.content;
@@ -162,7 +155,7 @@ jupiterBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[4].images.planet;
       planetName.innerHTML = dataInfo[4].name;
       planetDesc.innerHTML = dataInfo[4].overview.content;
@@ -184,7 +177,7 @@ saturnBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[5].images.planet;
       planetName.innerHTML = dataInfo[5].name;
       planetDesc.innerHTML = dataInfo[5].overview.content;
@@ -206,7 +199,7 @@ uranusBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[6].images.planet;
       planetName.innerHTML = dataInfo[6].name;
       planetDesc.innerHTML = dataInfo[6].overview.content;
@@ -228,7 +221,7 @@ neptuneBtn.addEventListener("click", () => {
     })
     .then((data) => {
       let dataInfo = data;
-      console.log(dataInfo);
+
       planetImg.src = dataInfo[7].images.planet;
       planetName.innerHTML = dataInfo[7].name;
       planetDesc.innerHTML = dataInfo[7].overview.content;
