@@ -55,21 +55,17 @@ mercuryBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[0].radius;
       averageTime.innerHTML = dataInfo[0].temperature;
     });
-  const active = document.querySelector(".active");
-  console.log(active);
-  //   active.style.borderBottom = "5px solid rgb(65,158,187)";
-  callToActionBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      callToActionBtns.forEach((el) =>
-        el.classList.remove("active", "mercury_styles")
-      );
-      e.target.classList.toggle("active");
-      e.target.classList.toggle("mercury_styles");
-      //   e.target.classList.contains("active")
-      //     ? (e.target.style.borderBottom = "5px solid red")
-      //     : "0px solid white";
-    });
-  });
+  //   const active = document.querySelector(".active");
+  //   console.log(active);
+
+  //   callToActionBtns.forEach((btn) => {
+  //     btn.addEventListener("click", (e) => {
+  //       callToActionBtns.forEach((el) =>
+  //         el.classList.remove("active", "mercury_styles")
+  //       );
+  //       e.target.classList.toggle("active");
+  //       e.target.classList.toggle("mercury_styles");
+  //     });
 });
 
 venusBtn.addEventListener("click", () => {
@@ -92,6 +88,15 @@ venusBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[1].radius;
       averageTime.innerHTML = dataInfo[1].temperature;
     });
+  //   callToActionBtns.forEach((btn) => {
+  //     btn.addEventListener("click", (e) => {
+  //       callToActionBtns.forEach((el) =>
+  //         el.classList.remove("active", "venus_styles")
+  //       );
+  //       e.target.classList.toggle("active");
+  //       e.target.classList.toggle("venus_styles");
+  //     });
+  //   });
 });
 
 earthBtn.addEventListener("click", () => {

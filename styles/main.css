@@ -242,6 +242,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   border-bottom: 5px solid #419ebb;
 }
 
+.venus_styles {
+  border-bottom: 5px solid #eda249;
+}
+
 .image-container {
   display: -webkit-box;
   display: -ms-flexbox;

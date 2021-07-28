@@ -202,9 +202,11 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 }
 
 .mercury_styles {
-  //   color: white;
   border-bottom: 5px solid $lightblue;
-  //   padding-bottom: 1rem;
+}
+
+.venus_styles {
+  border-bottom: 5px solid $lightorange;
 }
 
 //  MOBILE CALL TO ACTION -END
