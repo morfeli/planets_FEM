@@ -55,17 +55,6 @@ mercuryBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[0].radius;
       averageTime.innerHTML = dataInfo[0].temperature;
     });
-  //   const active = document.querySelector(".active");
-  //   console.log(active);
-
-  //   callToActionBtns.forEach((btn) => {
-  //     btn.addEventListener("click", (e) => {
-  //       callToActionBtns.forEach((el) =>
-  //         el.classList.remove("active", "mercury_styles")
-  //       );
-  //       e.target.classList.toggle("active");
-  //       e.target.classList.toggle("mercury_styles");
-  //     });
 });
 
 venusBtn.addEventListener("click", () => {
