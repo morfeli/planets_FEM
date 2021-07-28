@@ -55,8 +55,21 @@ mercuryBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[0].radius;
       averageTime.innerHTML = dataInfo[0].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(65,158,187)";
+  const active = document.querySelector(".active");
+  console.log(active);
+  //   active.style.borderBottom = "5px solid rgb(65,158,187)";
+  callToActionBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      callToActionBtns.forEach((el) =>
+        el.classList.remove("active", "mercury_styles")
+      );
+      e.target.classList.toggle("active");
+      e.target.classList.toggle("mercury_styles");
+      //   e.target.classList.contains("active")
+      //     ? (e.target.style.borderBottom = "5px solid red")
+      //     : "0px solid white";
+    });
+  });
 });
 
 venusBtn.addEventListener("click", () => {
@@ -79,8 +92,6 @@ venusBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[1].radius;
       averageTime.innerHTML = dataInfo[1].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(237,162,73)";
 });
 
 earthBtn.addEventListener("click", () => {
@@ -103,8 +114,8 @@ earthBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[2].radius;
       averageTime.innerHTML = dataInfo[2].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(109,46,213)";
+  //   document.querySelector(".active").style.borderBottom =
+  //     "5px solid rgb(109,46,213)";
 });
 
 marsBtn.addEventListener("click", () => {
@@ -127,8 +138,6 @@ marsBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[3].radius;
       averageTime.innerHTML = dataInfo[3].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(205,81,32)";
 });
 
 jupiterBtn.addEventListener("click", () => {
@@ -151,8 +160,6 @@ jupiterBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[4].radius;
       averageTime.innerHTML = dataInfo[4].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(216,58,52)";
 });
 
 saturnBtn.addEventListener("click", () => {
@@ -175,8 +182,6 @@ saturnBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[5].radius;
       averageTime.innerHTML = dataInfo[5].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(209,76,50)";
 });
 
 uranusBtn.addEventListener("click", () => {
@@ -199,8 +204,6 @@ uranusBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[6].radius;
       averageTime.innerHTML = dataInfo[6].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(30,193,162)";
 });
 
 neptuneBtn.addEventListener("click", () => {
@@ -223,6 +226,4 @@ neptuneBtn.addEventListener("click", () => {
       radiusTime.innerHTML = dataInfo[7].radius;
       averageTime.innerHTML = dataInfo[7].temperature;
     });
-  document.querySelector(".active").style.borderBottom =
-    "5px solid rgb(45,104,240)";
 });
