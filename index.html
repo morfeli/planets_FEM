@@ -36,11 +36,30 @@
     </header>
     <section class="mobile__callToAction">
       <div class="mobile__CTA">
-        <button id="overview-btn" class="mobile__CTA--btn active">
+        <button
+          data-option="overview"
+          data-image="planet"
+          id="overview-btn"
+          class="mobile__CTA--btn active"
+        >
           OVERVIEW
         </button>
-        <button id="structure-btn" class="mobile__CTA--btn">STRUCTURE</button>
-        <button id="surface-btn" class="mobile__CTA--btn">SURFACE</button>
+        <button
+          data-option="structure"
+          data-image="internal"
+          id="structure-btn"
+          class="mobile__CTA--btn"
+        >
+          STRUCTURE
+        </button>
+        <button
+          data-option="geology"
+          data-image="planet"
+          id="surface-btn"
+          class="mobile__CTA--btn"
+        >
+          SURFACE
+        </button>
       </div>
     </section>
     <main class="main__container">
@@ -53,7 +72,7 @@
         />
       </section>
       <section class="main-content">
-        <h1 id="planet-name" class="planet-name">Earth</h1>
+        <h1 data-id="2" id="planet-name" class="planet-name">Earth</h1>
         <p id="planet-description" class="planet-description">
           Third planet from the Sun and the only known planet to harbor life.
           About 29.2% of Earth's surface is land with remaining 70.8% is covered
@@ -91,5 +110,6 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/mobile.js"></script>
   </body>
 </html>

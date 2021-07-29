@@ -1,3 +1,5 @@
+"use strict";
+
 const callToActionBtns = document.querySelectorAll(".mobile__CTA--btn");
 
 //  Capture Button Value IDS
