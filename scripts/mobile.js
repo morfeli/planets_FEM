@@ -7,6 +7,7 @@ const mobileImg = document.querySelector(".planet-img");
 const mobileGeoImg = document.querySelector(".planet-geoImg");
 
 let data = "../data/data.json";
+
 // render content with click event
 
 mobileBtns.forEach((btn) => {
