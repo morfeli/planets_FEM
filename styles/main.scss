@@ -215,13 +215,26 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 
 .image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 3rem;
 }
 
 .planet-img {
   width: 173px;
   height: 173px;
+}
+
+.planet-geoImg {
+  display: none;
+}
+
+.geology {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
 }
 
 .planet-name {
