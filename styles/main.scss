@@ -328,6 +328,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   justify-content: space-between;
   align-items: center;
   width: 279px;
+  @include tablet {
+    flex-direction: column;
+    align-items: baseline;
+    height: 50px;
+    margin-left: 10px;
+  }
 }
 
 //  MOBILE CALL TO ACTION -END
@@ -409,6 +415,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   width: 327px;
   height: 216px;
   margin: 0 auto;
+  @include tablet {
+    flex-direction: row;
+    width: 93vw;
+  }
 }
 
 .info-div {
@@ -418,12 +428,19 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   justify-content: space-between;
   align-items: center;
   border: 1px solid hsl(0, 0, 50%);
+  @include tablet {
+    width: 164px;
+    height: 88px;
+  }
 }
 
 .info-style {
   font-family: "Antonio", sans-serif;
   color: $white;
   font-size: 20px;
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 .span-style {
