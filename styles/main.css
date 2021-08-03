@@ -465,7 +465,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 @media (min-width: 760px) {
   .geology {
     position: absolute;
-    top: 360px;
+    top: 500px;
     left: 314px;
     width: 135px;
     height: 135px;
