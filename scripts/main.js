@@ -33,6 +33,8 @@ const neptuneBtn = document.getElementById("neptune");
 
 const geoImg = document.querySelector(".planet-geoImg");
 
+neptuneBtn.style.borderBottom = "none";
+
 toggleBtn.addEventListener("click", () => {
   navBarLink.classList.toggle("toggle");
 });
