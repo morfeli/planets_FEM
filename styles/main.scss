@@ -368,7 +368,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   object-fit: fill;
   @include tablet {
     position: absolute;
-    bottom: 180px;
+    // bottom: 180px;
     left: 314px;
     width: 135px;
     height: 135px;
