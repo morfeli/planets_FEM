@@ -43,7 +43,7 @@ header {
 .logo {
   font-family: "Antonio";
   color: white;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -139,6 +139,16 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   border-color: #979797;
 }
 
+.svg {
+  position: relative;
+}
+
+.inner-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 768px) {
   .toggle-button {
     display: -webkit-box;
@@ -204,6 +214,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 1rem;
     border-bottom: 1px solid #979797;
     padding-bottom: 20px;
