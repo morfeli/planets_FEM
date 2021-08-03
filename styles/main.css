@@ -170,7 +170,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 665px;
+    width: 70vw;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -197,17 +197,48 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   display: flex;
 }
 
+@media (min-width: 760px) {
+  .mobile__callToAction {
+    display: none;
+  }
+}
+
+.btns__container {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .btns__container {
+    display: block;
+  }
+}
+
+.btns__container--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tablet__view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 @media (max-width: 760px) {
   .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .mobile-nav-svg {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 135px;
   }
   .navbar--btn-mobilemenu {
     display: block;
@@ -350,6 +381,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   cursor: pointer;
 }
 
+@media (min-width: 760px) {
+  .mobile__CTA--btn {
+    width: 281px;
+  }
+}
+
 .active {
   color: white;
   border-bottom: 5px solid #6d2ed5;
@@ -420,6 +457,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   width: 327px;
 }
 
+@media (min-width: 760px) {
+  .planet-description {
+    text-align: unset;
+  }
+}
+
 .wiki-source {
   font-family: "Spartan Regular", sans-serif;
   font-size: 12px;
@@ -446,6 +489,15 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   height: 300px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (min-width: 760px) {
+  .main-content {
+    width: 339px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .info-content {

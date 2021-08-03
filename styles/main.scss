@@ -120,7 +120,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .navbar__links--ul {
   @include tablet {
     display: flex;
-    width: 665px;
+    width: 70vw;
     justify-content: space-between;
   }
 }
@@ -142,16 +142,32 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .inner-div {
   display: flex;
 }
+
+.mobile__callToAction {
+  @include tablet {
+    display: none;
+  }
+}
+
+.btns__container {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  &--box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tablet__view {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 @media (max-width: 760px) {
   .toggle-button {
     display: flex;
-  }
-
-  .mobile-nav-svg {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 135px;
   }
 
   .navbar--btn-mobilemenu {
@@ -274,6 +290,15 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #979797;
+  @include tablet {
+    // display: flex;
+    // flex-direction: column;
+    // position: absolute;
+    // top: 230px;
+    // left: 425px;
+    // width: 281px;
+    // border-bottom: none;
+  }
   &--btn {
     position: relative;
     margin-top: 1rem;
@@ -285,9 +310,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     width: 100px;
     border: none;
     cursor: pointer;
+    @include tablet {
+      width: 281px;
+      //   border: 1px solid white;
+    }
   }
 }
-
 .active {
   color: white;
   border-bottom: 5px solid $purple;
@@ -345,6 +373,9 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   color: $white;
   text-align: center;
   width: 327px;
+  @include tablet {
+    text-align: unset;
+  }
 }
 
 .wiki-source {
@@ -365,6 +396,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   flex-direction: column;
   height: 300px;
   justify-content: space-around;
+  @include tablet {
+    width: 339px;
+    align-items: baseline;
+  }
 }
 
 .info-content {

@@ -1,5 +1,5 @@
 // capture variables
-const mobileBtns = document.querySelectorAll(".mobile__CTA--btn");
+const btns = document.querySelectorAll(".mobile__CTA--btn");
 const mobileName = document.querySelector(".planet-name");
 const mobileDesc = document.querySelector(".planet-description");
 const mobileSource = document.querySelector(".wiki-source");
@@ -10,9 +10,9 @@ let data = "../data/data.json";
 
 // render content with click event
 
-mobileBtns.forEach((btn) => {
+btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    mobileBtns.forEach((el) => el.classList.remove("active"));
+    btns.forEach((el) => el.classList.remove("active"));
     e.target.classList.toggle("active");
     let cursor = mobileName.dataset.id;
     let option = btn.dataset.option;
