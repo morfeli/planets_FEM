@@ -164,6 +164,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 7rem;
 }
 @media (max-width: 760px) {
   .toggle-button {
@@ -346,6 +347,9 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  @include tablet {
+    margin-top: 6rem;
+  }
 }
 
 .planet-img {
@@ -425,6 +429,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   @include tablet {
     flex-direction: row;
     width: 93vw;
+    height: 140px;
   }
 }
 

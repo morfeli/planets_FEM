@@ -232,6 +232,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 7rem;
 }
 
 @media (max-width: 760px) {
@@ -438,6 +439,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   margin-top: 3rem;
 }
 
+@media (min-width: 760px) {
+  .image-container {
+    margin-top: 6rem;
+  }
+}
+
 .planet-img {
   width: 173px;
   height: 173px;
@@ -547,6 +554,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 93vw;
+    height: 140px;
   }
 }
 
