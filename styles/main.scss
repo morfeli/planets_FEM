@@ -362,6 +362,13 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   width: 200px;
   height: 200px;
   object-fit: fill;
+  @include tablet {
+    position: absolute;
+    bottom: 270px;
+    left: 351px;
+    width: 135px;
+    height: 135px;
+  }
 }
 
 .planet-name {
