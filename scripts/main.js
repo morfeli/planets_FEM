@@ -32,7 +32,6 @@ const uranusBtn = document.getElementById("uranus");
 const neptuneBtn = document.getElementById("neptune");
 
 const geoImg = document.querySelector(".planet-geoImg");
-console.log(geoImg);
 
 toggleBtn.addEventListener("click", () => {
   navBarLink.classList.toggle("toggle");
@@ -72,5 +71,7 @@ menuBtn.forEach((item) => {
     navBarLink.classList.contains("toggle")
       ? navBarLink.classList.remove("toggle")
       : navBarLink.classList.toggle("toggle");
+
+    document.getElementById("checkbox").checked = false;
   });
 });
