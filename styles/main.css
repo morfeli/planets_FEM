@@ -38,7 +38,6 @@ header {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   width: 100%;
-  padding-bottom: 2rem;
 }
 
 .logo {
@@ -136,6 +135,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   width: 100vw;
 }
 
+.divider {
+  border-color: #979797;
+}
+
 @media (max-width: 768px) {
   .toggle-button {
     display: -webkit-box;
@@ -193,7 +196,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    border-top: 1px solid #979797;
     max-height: 1000px;
     -webkit-transition: max-height 400ms ease-in-out;
     transition: max-height 400ms ease-in-out;
@@ -268,7 +270,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #979797;
-  border-top: 1px solid #979797;
 }
 
 .mobile__CTA--btn {
