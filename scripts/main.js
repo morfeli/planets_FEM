@@ -1,6 +1,8 @@
 "use strict";
 
 const callToActionBtns = document.querySelectorAll(".mobile__CTA--btn");
+const toggleBtn = document.querySelector(".toggle-button");
+const navBarLink = document.querySelector(".navbar__links--ul");
 const menuBtn = document.querySelectorAll(".navbar__links--li");
 
 //  Capture Button Value IDS
@@ -31,6 +33,10 @@ const neptuneBtn = document.getElementById("neptune");
 
 const geoImg = document.querySelector(".planet-geoImg");
 console.log(geoImg);
+
+toggleBtn.addEventListener("click", () => {
+  navBarLink.classList.toggle("toggle");
+});
 
 callToActionBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -63,5 +69,8 @@ menuBtn.forEach((item) => {
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
     });
+    navBarLink.classList.contains("toggle")
+      ? navBarLink.classList.remove("toggle")
+      : navBarLink.classList.toggle("toggle");
   });
 });

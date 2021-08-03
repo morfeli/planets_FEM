@@ -38,7 +38,6 @@ header {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   width: 100%;
-  border-bottom: 1px solid #979797;
   padding-bottom: 2rem;
 }
 
@@ -46,6 +45,7 @@ header {
   font-family: "Antonio";
   color: white;
   margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 .toggle-button {
@@ -132,6 +132,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   opacity: 0;
 }
 
+.navbar__links {
+  width: 100vw;
+}
+
 @media (max-width: 768px) {
   .toggle-button {
     display: -webkit-box;
@@ -159,28 +163,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     font-family: "Livvic", sans-serif;
     font-weight: 600;
   }
-  .navbar-links.active {
-    overflow: hidden;
-    -webkit-transition: ease-in-out 5s linear;
-    transition: ease-in-out 5s linear;
-    z-index: 1;
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0vw;
-    padding-bottom: 2rem;
-    font-size: 2rem;
-    height: 583px;
-    width: 235px;
-    background-color: #2c6269;
-  }
   .navbar__links--ul {
-    font-family: "Spartan Bold", sans-serif;
-    font-size: 15px;
-    color: #ffff;
-    letter-spacing: 0.5px;
-    width: 327px;
-    height: 487px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,11 +174,34 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    display: none;
+  }
+  .navbar__links--ul.toggle {
+    margin: 0 auto;
+    font-family: "Spartan Bold", sans-serif;
+    font-size: 15px;
+    color: #ffff;
+    letter-spacing: 0.5px;
+    width: 327px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid #979797;
   }
   .navbar__links--li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 1rem;
+    border-bottom: 1px solid #979797;
+    padding-bottom: 20px;
   }
   .mercury-oval {
     width: 20px;
@@ -259,6 +265,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #979797;
+  border-top: 1px solid #979797;
 }
 
 .mobile__CTA--btn {
