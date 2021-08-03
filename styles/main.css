@@ -41,7 +41,7 @@ header {
 }
 
 .logo {
-  font-family: "Antonio";
+  font-family: "Antonio", sans-serif;
   color: white;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
@@ -355,7 +355,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 }
 
 .planet-name {
-  font-family: "Antonio";
+  font-family: "Antonio", sans-serif;
   font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
@@ -430,9 +430,8 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 }
 
 .info-style {
-  font-family: "Antonio";
+  font-family: "Antonio", sans-serif;
   color: white;
-  font-weight: 400;
   font-size: 20px;
 }
 
