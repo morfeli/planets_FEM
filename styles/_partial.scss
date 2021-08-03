@@ -1,58 +1,58 @@
 // Design System
 
-//  Color Variables 
-$white: rgb(255,255,255);
-$black: rgb(7,7,36);
-$darkgrey: rgb(56,56,79);
-$lightgrey: rgb(131,131,145);
-$lightblue: rgb(65,158,187);
-$lightorange: rgb(237,162,73);
-$purple: rgb(109,46,213);
-$darkorange: rgb(209,76,50);
-$darkerorange: rgb(216,58,52);
-$orange: rgb(205,81,32);
-$green: rgb(30,193,162);
-$blue: rgb(45,104,240);
+//  Color Variables
+$white: rgb(255, 255, 255);
+$black: rgb(7, 7, 36);
+$darkgrey: rgb(56, 56, 79);
+$lightgrey: rgb(131, 131, 145);
+$lightblue: rgb(65, 158, 187);
+$lightorange: rgb(237, 162, 73);
+$purple: rgb(109, 46, 213);
+$darkorange: rgb(209, 76, 50);
+$darkerorange: rgb(216, 58, 52);
+$orange: rgb(205, 81, 32);
+$green: rgb(30, 193, 162);
+$blue: rgb(45, 104, 240);
 
-// Font Variables 
+// Font Variables
 $antonio-font: "Antonio";
 $spartan-reg: "Spartan Regular";
-$spartan-bold: 'Spartan Bold';
+$spartan-bold: "Spartan Bold";
 
 // Media Query
-$tablet: 768px;
+$tablet: 760px;
 $desktop: 1440px;
 
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 
 @font-face {
-    font-family: "Antonio";
-    src: url("https://fonts.googleapis.com/css2?family=Antonio:wght@500")
+  font-family: "Antonio";
+  src: url("https://fonts.googleapis.com/css2?family=Antonio:wght@500")
     format("woff2");
 }
 
 @font-face {
-    font-family: "Spartan Regular";
-    src: url("https://fonts.googleapis.com/css2?family=Spartan&display=swap")
+  font-family: "Spartan Regular";
+  src: url("https://fonts.googleapis.com/css2?family=Spartan&display=swap")
     format("woff2");
 }
 
 @font-face {
-    font-family: "Spartan Bold";
-    src: url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap")
+  font-family: "Spartan Bold";
+  src: url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap")
     format("woff2");
 }
 
 @mixin tablet {
-    @media (min-width: $tablet) {
-      @content;
-    }
+  @media (min-width: $tablet) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media (min-width: $desktop) {
-      @content;
-    }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
   }
+}

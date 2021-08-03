@@ -27,6 +27,21 @@ body {
   background: url("../assets/background-stars.svg"), #070724;
 }
 
+@media (min-width: 760px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,12 +150,45 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   width: 100vw;
 }
 
+@media (min-width: 760px) {
+  .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "Spartan Bold", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 760px) {
+  .navbar__links--ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 665px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.navbar__links--li {
+  list-style: none;
+}
+
 .divider {
   border-color: #979797;
 }
 
-.svg {
-  position: relative;
+@media (min-width: 760px) {
+  .svg {
+    display: none;
+  }
 }
 
 .inner-div {
@@ -149,7 +197,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   display: flex;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 760px) {
   .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
