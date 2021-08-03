@@ -149,7 +149,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -223,6 +223,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     margin-top: 1rem;
     border-bottom: 1px solid #979797;
     padding-bottom: 20px;
+    cursor: pointer;
   }
   .mercury-oval {
     width: 20px;
@@ -298,6 +299,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   letter-spacing: 2px;
   width: 100px;
   border: none;
+  cursor: pointer;
 }
 
 .active {
