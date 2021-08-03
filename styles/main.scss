@@ -347,6 +347,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  position: relative;
   @include tablet {
     margin-top: 6rem;
   }
@@ -368,8 +369,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   object-fit: fill;
   @include tablet {
     position: absolute;
-    top: 510px;
-    left: 320px;
+    top: 175px;
     width: 135px;
     height: 135px;
   }
