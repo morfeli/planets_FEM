@@ -88,6 +88,39 @@ menuBtn.forEach((item) => {
         planetImg.style.width = "111px";
         planetImg.style.height = "111px";
       }
+      if (planetName.dataset.id == 1) {
+        planetImg.style.width = "154px";
+        planetImg.style.height = "154px";
+      }
+      if (planetName.dataset.id == 2) {
+        planetImg.style.width = "173px";
+        planetImg.style.height = "173px";
+      }
+
+      if (planetName.dataset.id == 3) {
+        planetImg.style.width = "129px";
+        planetImg.style.height = "129px";
+      }
+
+      if (planetName.dataset.id == 4) {
+        planetImg.style.width = "224px";
+        planetImg.style.height = "224px";
+      }
+
+      if (planetName.dataset.id == 5) {
+        planetImg.style.width = "256px";
+        planetImg.style.height = "256px";
+      }
+
+      if (planetName.dataset.id == 6) {
+        planetImg.style.width = "176px";
+        planetImg.style.height = "176px";
+      }
+
+      if (planetName.dataset.id == 7) {
+        planetImg.style.width = "173px";
+        planetImg.style.height = "173px";
+      }
     });
 
     navBarLink.classList.contains("toggle")
