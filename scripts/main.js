@@ -1,5 +1,3 @@
-"use strict";
-
 const callToActionBtns = document.querySelectorAll(".mobile__CTA--btn");
 const callToActionBtnsTabletView = document.querySelectorAll(
   ".btns__container--CTA"
