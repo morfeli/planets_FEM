@@ -158,6 +158,21 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     display: flex;
     flex-direction: column;
   }
+  &--CTA {
+    position: relative;
+    margin-top: 1rem;
+    background: transparent;
+    color: #979797;
+    font-family: $spartan-bold, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    @include tablet {
+      width: 281px;
+    }
+  }
 }
 
 .tablet__view {
@@ -291,15 +306,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #979797;
-  @include tablet {
-    // display: flex;
-    // flex-direction: column;
-    // position: absolute;
-    // top: 230px;
-    // left: 425px;
-    // width: 281px;
-    // border-bottom: none;
-  }
+
   &--btn {
     position: relative;
     margin-top: 1rem;
@@ -313,14 +320,21 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     cursor: pointer;
     @include tablet {
       width: 281px;
-      //   border: 1px solid white;
     }
   }
 }
+
 .active {
   color: white;
   border-bottom: 5px solid $purple;
   padding-bottom: 1rem;
+}
+
+.tablet-active {
+  color: white;
+  background-color: $purple;
+  height: 50px;
+  border-radius: 25px;
 }
 
 .test-div {

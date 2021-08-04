@@ -223,6 +223,25 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
           flex-direction: column;
 }
 
+.btns__container--CTA {
+  position: relative;
+  margin-top: 1rem;
+  background: transparent;
+  color: #979797;
+  font-family: "Spartan Bold", sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  .btns__container--CTA {
+    width: 281px;
+  }
+}
+
 .tablet__view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,6 +411,13 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   color: white;
   border-bottom: 5px solid #6d2ed5;
   padding-bottom: 1rem;
+}
+
+.tablet-active {
+  color: white;
+  background-color: #6d2ed5;
+  height: 50px;
+  border-radius: 25px;
 }
 
 .test-div {

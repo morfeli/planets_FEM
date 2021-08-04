@@ -1,6 +1,9 @@
 "use strict";
 
 const callToActionBtns = document.querySelectorAll(".mobile__CTA--btn");
+const callToActionBtnsTabletView = document.querySelectorAll(
+  ".btns__container--CTA"
+);
 const toggleBtn = document.querySelector(".toggle-button");
 const navBarLink = document.querySelector(".navbar__links--ul");
 const menuBtn = document.querySelectorAll(".navbar__links--li");
@@ -9,6 +12,10 @@ const menuBtn = document.querySelectorAll(".navbar__links--li");
 const overviewBtn = document.getElementById("overview-btn");
 const structureBtn = document.getElementById("structure-btn");
 const surfaceBtn = document.getElementById("surface-btn");
+const overviewBtnTabletView = document.getElementById(
+  "overview-btn-tabDesktop"
+);
+console.log(overviewBtnTabletView);
 
 // Capture Planet Value IDS
 let planetImg = document.getElementById("planet-img");
@@ -46,13 +53,19 @@ callToActionBtns.forEach((btn) => {
   });
 });
 
+callToActionBtnsTabletView.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    callToActionBtnsTabletView.forEach((el) =>
+      el.classList.remove("tablet-active")
+    );
+    e.target.classList.toggle("tablet-active");
+  });
+});
+
 let file = "../data/data.json";
 
 menuBtn.forEach((item) => {
   item.addEventListener("click", () => {
-    for (let btn of callToActionBtns) {
-      btn.classList.remove("active");
-    }
     let cursor = item.dataset.id;
     planetName.dataset.id = cursor;
 
@@ -70,6 +83,13 @@ menuBtn.forEach((item) => {
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
     });
+    for (let btn of callToActionBtns) {
+      btn.classList.remove("active");
+    }
+    for (let btn of callToActionBtnsTabletView) {
+      btn.classList.remove("tablet-active");
+    }
+
     navBarLink.classList.contains("toggle")
       ? navBarLink.classList.remove("toggle")
       : navBarLink.classList.toggle("toggle");

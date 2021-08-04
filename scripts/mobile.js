@@ -1,5 +1,6 @@
 // capture variables
 const btns = document.querySelectorAll(".mobile__CTA--btn");
+const tabViewBtns = document.querySelectorAll(".btns__container--CTA");
 const mobileName = document.querySelector(".planet-name");
 const mobileDesc = document.querySelector(".planet-description");
 const mobileSource = document.querySelector(".wiki-source");
@@ -21,6 +22,30 @@ btns.forEach((btn) => {
     axios.get(data).then((res) => {
       let json = res.data;
       btn.style.borderBottomColor = json[cursor].color;
+      mobileName.innerHTML = json[cursor].name;
+      mobileDesc.textContent = json[cursor][option].content;
+      mobileSource.href = json[cursor][option].source;
+      mobileImg.src = json[cursor].images[picture];
+      mobileGeoImg.src = json[cursor].images.geology;
+      mobileGeoImg.classList.remove("geology");
+      if (btn.dataset.option == "geology") {
+        mobileGeoImg.classList.add("geology");
+      }
+    });
+  });
+});
+
+tabViewBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    tabViewBtns.forEach((el) => el.classList.remove("tablet-active"));
+    e.target.classList.toggle("tablet-active");
+    let cursor = mobileName.dataset.id;
+    let option = btn.dataset.option;
+    let picture = btn.dataset.image;
+
+    axios.get(data).then((res) => {
+      let json = res.data;
+      btn.style.backGroundColor = json[cursor].color;
       mobileName.innerHTML = json[cursor].name;
       mobileDesc.textContent = json[cursor][option].content;
       mobileSource.href = json[cursor][option].source;
