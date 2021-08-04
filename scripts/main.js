@@ -27,13 +27,6 @@ let radiusTime = document.getElementById("radius-time");
 let averageTime = document.getElementById("average-time");
 
 // Capture Planets Nav Link
-const mercuryBtn = document.getElementById("mercury");
-const venusBtn = document.getElementById("venus");
-const earthBtn = document.getElementById("earth");
-const marsBtn = document.getElementById("mars");
-const jupiterBtn = document.getElementById("jupiter");
-const saturnBtn = document.getElementById("saturn");
-const uranusBtn = document.getElementById("uranus");
 const neptuneBtn = document.getElementById("neptune");
 
 const geoImg = document.querySelector(".planet-geoImg");
