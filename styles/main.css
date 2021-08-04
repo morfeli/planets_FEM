@@ -52,6 +52,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid white;
   }
 }
 
@@ -307,6 +308,21 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   color: #979797;
 }
 
+@media (min-width: 1440px) {
+  .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
 .tablet__view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,6 +333,20 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 7rem;
+}
+
+@media (min-width: 1440px) {
+  .tablet__view {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    position: relative;
+    left: 60px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -568,6 +598,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   text-transform: uppercase;
 }
 
+@media (min-width: 1440px) {
+  .planet-name {
+    font-size: 4rem;
+  }
+}
+
 .planet-description {
   font-family: "Spartan Regular", sans-serif;
   font-size: 11px;
@@ -580,6 +616,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 @media (min-width: 760px) {
   .planet-description {
     text-align: unset;
+  }
+}
+
+@media (min-width: 1440px) {
+  .planet-description {
+    font-size: 14px;
   }
 }
 
@@ -644,6 +686,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
             flex-direction: row;
     width: 93vw;
     height: 140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .info-content {
+    margin-top: 12rem;
   }
 }
 
