@@ -127,8 +127,40 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 
 .navbar__links--li {
   list-style: none;
+  cursor: pointer;
 }
 
+.navbar__links--li:first-child:hover {
+  color: #419ebb;
+}
+
+.navbar__links--li:nth-child(2):hover {
+  color: #eda249;
+}
+
+.navbar__links--li:nth-child(3):hover {
+  color: #6d2ed5;
+}
+
+.navbar__links--li:nth-child(4):hover {
+  color: #d14c32;
+}
+
+.navbar__links--li:nth-child(5):hover {
+  color: #d83a34;
+}
+
+.navbar__links--li:nth-child(6):hover {
+  color: #cd5120;
+}
+
+.navbar__links--li:nth-child(7):hover {
+  color: #1ec1a2;
+}
+
+.navbar__links--li:nth-child(8):hover {
+  color: #2d68f0;
+}
 .divider {
   border-color: #979797;
 }
@@ -236,7 +268,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     margin-top: 1rem;
     border-bottom: 1px solid #979797;
     padding-bottom: 20px;
-    cursor: pointer;
   }
 
   .mercury-oval {
