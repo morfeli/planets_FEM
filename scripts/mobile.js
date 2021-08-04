@@ -9,6 +9,8 @@ const mobileGeoImg = document.querySelector(".planet-geoImg");
 
 let data = "../data/data.json";
 
+const width = window.screen.width;
+
 // render content with click event
 
 btns.forEach((btn) => {

@@ -54,6 +54,7 @@ callToActionBtnsTabletView.forEach((btn) => {
 });
 
 let file = "../data/data.json";
+const screenSize = window.screen.width;
 
 menuBtn.forEach((item) => {
   item.addEventListener("click", () => {
@@ -82,6 +83,11 @@ menuBtn.forEach((item) => {
       radiusTime.innerHTML = json[cursor].radius;
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
+
+      if (planetName.dataset.id == 0) {
+        planetImg.style.width = "111px";
+        planetImg.style.height = "111px";
+      }
     });
 
     navBarLink.classList.contains("toggle")
