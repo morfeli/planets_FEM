@@ -66,6 +66,13 @@ let file = "../data/data.json";
 
 menuBtn.forEach((item) => {
   item.addEventListener("click", () => {
+    for (let btn of callToActionBtns) {
+      btn.classList.remove("active");
+    }
+    for (let btn of callToActionBtnsTabletView) {
+      btn.classList.remove("tablet-active");
+    }
+
     let cursor = item.dataset.id;
     planetName.dataset.id = cursor;
 
@@ -76,6 +83,8 @@ menuBtn.forEach((item) => {
       planetImg.src = json[cursor].images.planet;
       overviewBtn.style.borderBottomColor = json[cursor].color;
       overviewBtn.classList.add("active");
+      overviewBtnTabletView.style.backgroundColor = json[cursor].color;
+      overviewBtnTabletView.classList.add("tablet-active");
       wikiSource.href = json[cursor].overview.source;
       rotateTime.innerHTML = json[cursor].rotation;
       revolutionTime.innerHTML = json[cursor].revolution;
@@ -83,12 +92,6 @@ menuBtn.forEach((item) => {
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
     });
-    for (let btn of callToActionBtns) {
-      btn.classList.remove("active");
-    }
-    for (let btn of callToActionBtnsTabletView) {
-      btn.classList.remove("tablet-active");
-    }
 
     navBarLink.classList.contains("toggle")
       ? navBarLink.classList.remove("toggle")

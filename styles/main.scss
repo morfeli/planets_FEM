@@ -167,11 +167,16 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     font-size: 9px;
     letter-spacing: 2px;
     width: 100px;
-    border: none;
+    height: 50px;
+    border: 1px solid white;
     cursor: pointer;
     @include tablet {
       width: 281px;
     }
+  }
+  &--CTA:hover {
+    background-color: $darkgrey;
+    color: #979797;
   }
 }
 
@@ -333,8 +338,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .tablet-active {
   color: white;
   background-color: $purple;
-  height: 50px;
-  border-radius: 25px;
+  padding-bottom: 1rem;
 }
 
 .test-div {

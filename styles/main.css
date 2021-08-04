@@ -232,7 +232,8 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   font-size: 9px;
   letter-spacing: 2px;
   width: 100px;
-  border: none;
+  height: 50px;
+  border: 1px solid white;
   cursor: pointer;
 }
 
@@ -240,6 +241,11 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   .btns__container--CTA {
     width: 281px;
   }
+}
+
+.btns__container--CTA:hover {
+  background-color: #38384f;
+  color: #979797;
 }
 
 .tablet__view {
@@ -416,8 +422,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .tablet-active {
   color: white;
   background-color: #6d2ed5;
-  height: 50px;
-  border-radius: 25px;
+  padding-bottom: 1rem;
 }
 
 .test-div {

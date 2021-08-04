@@ -45,7 +45,7 @@ tabViewBtns.forEach((btn) => {
 
     axios.get(data).then((res) => {
       let json = res.data;
-      btn.style.backGroundColor = json[cursor].color;
+      //   btn.style.backgroundColor = json[cursor].color;
       mobileName.innerHTML = json[cursor].name;
       mobileDesc.textContent = json[cursor][option].content;
       mobileSource.href = json[cursor][option].source;
