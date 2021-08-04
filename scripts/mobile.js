@@ -35,8 +35,8 @@ btns.forEach((btn) => {
   });
 });
 
-tabViewBtns.forEach((item) => {
-  item.addEventListener("click", (e) => {
+tabViewBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
     tabViewBtns.forEach((el) => el.classList.remove("tablet-active"));
     e.target.classList.toggle("tablet-active");
     let cursor = mobileName.dataset.id;
@@ -45,7 +45,7 @@ tabViewBtns.forEach((item) => {
 
     axios.get(data).then((res) => {
       let json = res.data;
-      item.style.backgroundColor = json[cursor].color;
+      //   btn.style.backgroundColor = json[cursor].color;
       mobileName.innerHTML = json[cursor].name;
       mobileDesc.textContent = json[cursor][option].content;
       mobileSource.href = json[cursor][option].source;
