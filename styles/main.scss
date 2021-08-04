@@ -18,6 +18,11 @@ nav {
     flex-direction: column;
     align-items: center;
   }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 header {
@@ -115,6 +120,9 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     letter-spacing: 1px;
     color: #ffffff;
   }
+  @include desktop {
+    width: unset;
+  }
 }
 
 .navbar__links--ul {
@@ -122,6 +130,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     display: flex;
     width: 70vw;
     justify-content: space-between;
+  }
+  @include desktop {
+    width: 45vw;
+    margin-right: 2rem;
   }
 }
 
