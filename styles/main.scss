@@ -438,6 +438,10 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     width: 285px;
     height: 285px;
   }
+  @include desktop {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .planet-geoImg {
