@@ -570,6 +570,13 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   height: 173px;
 }
 
+@media (min-width: 760px) {
+  .planet-img {
+    width: 285px;
+    height: 285px;
+  }
+}
+
 .planet-geoImg {
   display: none;
 }

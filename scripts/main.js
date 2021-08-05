@@ -54,7 +54,7 @@ callToActionBtnsTabletView.forEach((btn) => {
 });
 
 let file = "../data/data.json";
-const screenSize = window.screen.width;
+// const screenSize = screen.width;
 
 menuBtn.forEach((item) => {
   item.addEventListener("click", () => {
@@ -70,6 +70,7 @@ menuBtn.forEach((item) => {
 
     axios.get(file).then((res) => {
       let json = res.data;
+      const reswidth = screen.width;
       planetName.innerHTML = json[cursor].name;
       planetDesc.innerHTML = json[cursor].overview.content;
       planetImg.src = json[cursor].images.planet;
@@ -87,40 +88,205 @@ menuBtn.forEach((item) => {
       if (planetName.dataset.id == 0) {
         planetImg.style.width = "111px";
         planetImg.style.height = "111px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "200px";
+          planetImg.style.height = "200px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "290px";
+          planetImg.style.height = "290px";
+        }
       }
       if (planetName.dataset.id == 1) {
         planetImg.style.width = "154px";
         planetImg.style.height = "154px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "253px";
+          planetImg.style.height = "253px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "400px";
+          planetImg.style.height = "400px";
+        }
       }
       if (planetName.dataset.id == 2) {
         planetImg.style.width = "173px";
         planetImg.style.height = "173px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "285px";
+          planetImg.style.height = "285px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "450px";
+          planetImg.style.height = "450px";
+        }
       }
 
       if (planetName.dataset.id == 3) {
         planetImg.style.width = "129px";
         planetImg.style.height = "129px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "213px";
+          planetImg.style.height = "213px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "336px";
+          planetImg.style.height = "336px";
+        }
       }
 
       if (planetName.dataset.id == 4) {
         planetImg.style.width = "224px";
         planetImg.style.height = "224px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "369px";
+          planetImg.style.height = "369px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "582px";
+          planetImg.style.height = "582px";
+        }
       }
 
       if (planetName.dataset.id == 5) {
         planetImg.style.width = "256px";
         planetImg.style.height = "256px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "422px";
+          planetImg.style.height = "422px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "670px";
+          planetImg.style.height = "670px";
+        }
       }
 
       if (planetName.dataset.id == 6) {
         planetImg.style.width = "176px";
         planetImg.style.height = "176px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "290px";
+          planetImg.style.height = "290px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "458px";
+          planetImg.style.height = "458px";
+        }
       }
 
       if (planetName.dataset.id == 7) {
         planetImg.style.width = "173px";
         planetImg.style.height = "173px";
+        if (reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "285px";
+          planetImg.style.height = "285px";
+        }
+        if (reswidth >= 1440) {
+          planetImg.style.width = "450px";
+          planetImg.style.height = "450px";
+        }
       }
+
+      window.addEventListener("resize", () => {
+        const reswidth = screen.width;
+
+        if (planetName.dataset.id == 0 && reswidth < 768) {
+          planetImg.style.width = "111px";
+          planetImg.style.height = "111px";
+        }
+        if (planetName.dataset.id == 0 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "200px";
+          planetImg.style.height = "200px";
+        }
+        if (planetName.dataset.id == 0 && reswidth >= 1440) {
+          planetImg.style.width = "290px";
+          planetImg.style.height = "290px";
+        }
+        if (planetName.dataset.id == 1 && reswidth < 768) {
+          planetImg.style.width = "154px";
+          planetImg.style.height = "154px";
+        }
+        if (planetName.dataset.id == 1 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "253px";
+          planetImg.style.height = "253px";
+        }
+        if (planetName.dataset.id == 1 && reswidth >= 1440) {
+          planetImg.style.width = "400px";
+          planetImg.style.height = "400px";
+        }
+        if (planetName.dataset.id == 2 && reswidth < 768) {
+          planetImg.style.width = "173px";
+          planetImg.style.height = "173px";
+        }
+        if (planetName.dataset.id == 2 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "285px";
+          planetImg.style.height = "285px";
+        }
+        if (planetName.dataset.id == 2 && reswidth >= 1440) {
+          planetImg.style.width = "450px";
+          planetImg.style.height = "450px";
+        }
+        if (planetName.dataset.id == 3 && reswidth < 768) {
+          planetImg.style.width = "129px";
+          planetImg.style.height = "129px";
+        }
+        if (planetName.dataset.id == 3 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "213px";
+          planetImg.style.height = "213px";
+        }
+        if (planetName.dataset.id == 3 && reswidth >= 1440) {
+          planetImg.style.width = "336px";
+          planetImg.style.height = "336px";
+        }
+        if (planetName.dataset.id == 4 && reswidth < 768) {
+          planetImg.style.width = "224px";
+          planetImg.style.height = "224px";
+        }
+        if (planetName.dataset.id == 4 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "369px";
+          planetImg.style.height = "369px";
+        }
+        if (planetName.dataset.id == 4 && reswidth >= 1440) {
+          planetImg.style.width = "582px";
+          planetImg.style.height = "582px";
+        }
+        if (planetName.dataset.id == 5 && reswidth < 768) {
+          planetImg.style.width = "256px";
+          planetImg.style.height = "256px";
+        }
+        if (planetName.dataset.id == 5 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "422px";
+          planetImg.style.height = "422px";
+        }
+        if (planetName.dataset.id == 5 && reswidth >= 1440) {
+          planetImg.style.width = "670px";
+          planetImg.style.height = "670px";
+        }
+        if (planetName.dataset.id == 6 && reswidth < 768) {
+          planetImg.style.width = "176px";
+          planetImg.style.height = "176px";
+        }
+        if (planetName.dataset.id == 6 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "290px";
+          planetImg.style.height = "290px";
+        }
+        if (planetName.dataset.id == 6 && reswidth >= 1440) {
+          planetImg.style.width = "458px";
+          planetImg.style.height = "458px";
+        }
+        if (planetName.dataset.id == 7 && reswidth < 768) {
+          planetImg.style.width = "173px";
+          planetImg.style.height = "173px";
+        }
+        if (planetName.dataset.id == 7 && reswidth >= 768 && reswidth < 1440) {
+          planetImg.style.width = "285px";
+          planetImg.style.height = "285px";
+        }
+        if (planetName.dataset.id == 7 && reswidth >= 1440) {
+          planetImg.style.width = "450px";
+          planetImg.style.height = "450px";
+        }
+      });
     });
 
     navBarLink.classList.contains("toggle")
