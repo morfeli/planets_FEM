@@ -46,10 +46,17 @@ callToActionBtns.forEach((btn) => {
 
 callToActionBtnsTabletView.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    callToActionBtnsTabletView.forEach((el) =>
-      el.classList.remove("tablet-active")
-    );
-    e.target.classList.toggle("tablet-active");
+    callToActionBtnsTabletView.forEach((el) => {
+      el.classList.remove("tablet-active");
+      e.target.classList.toggle("tablet-active");
+    });
+  });
+});
+
+menuBtn.forEach((li) => {
+  li.addEventListener("click", function () {
+    menuBtn.forEach((btn) => btn.classList.remove("li-active"));
+    this.classList.add("li-active");
   });
 });
 

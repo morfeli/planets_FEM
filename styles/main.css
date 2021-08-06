@@ -513,6 +513,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   padding-bottom: 1rem;
 }
 
+@media (min-width: 1440px) {
+  .li-active {
+    border-top: 1px solid red;
+  }
+}
+
 .test-div {
   margin: 0 auto;
   display: -webkit-box;
