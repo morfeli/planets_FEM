@@ -430,7 +430,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     margin-top: 6rem;
   }
   @include desktop {
-    position: relative;
+    // position: relative;
     right: 20rem;
   }
 }
@@ -441,6 +441,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   @include tablet {
     width: 285px;
     height: 285px;
+    position: relative;
   }
   @include desktop {
     width: 450px;
@@ -460,14 +461,12 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   object-fit: fill;
   @include tablet {
     position: absolute;
-    top: 175px;
+    top: 70%;
     width: 135px;
     height: 135px;
   }
   @include desktop {
-    position: relative;
-    top: -20px;
-    right: 320px;
+    top: 80%;
     width: 163px;
     height: 199px;
   }

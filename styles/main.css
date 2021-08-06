@@ -567,7 +567,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 
 @media (min-width: 1440px) {
   .image-container {
-    position: relative;
     right: 20rem;
   }
 }
@@ -581,6 +580,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   .planet-img {
     width: 285px;
     height: 285px;
+    position: relative;
   }
 }
 
@@ -607,7 +607,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 @media (min-width: 760px) {
   .geology {
     position: absolute;
-    top: 175px;
+    top: 70%;
     width: 135px;
     height: 135px;
   }
@@ -615,9 +615,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 
 @media (min-width: 1440px) {
   .geology {
-    position: relative;
-    top: -20px;
-    right: 320px;
+    top: 80%;
     width: 163px;
     height: 199px;
   }
