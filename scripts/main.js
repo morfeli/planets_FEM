@@ -57,6 +57,14 @@ menuBtn.forEach((li) => {
   li.addEventListener("click", function () {
     menuBtn.forEach((btn) => btn.classList.remove("li-active"));
     this.classList.add("li-active");
+    document.getElementById("mercury").style.borderTopColor = "#419EBB";
+    document.getElementById("venus").style.borderTopColor = "#EDA249";
+    document.getElementById("earth").style.borderTopColor = "#6D2ED5";
+    document.getElementById("mars").style.borderTopColor = "#D14C32";
+    document.getElementById("jupiter").style.borderTopColor = "#D83A34";
+    document.getElementById("saturn").style.borderTopColor = "#CD5120";
+    document.getElementById("uranus").style.borderTopColor = "#1EC1A2";
+    document.getElementById("neptune").style.borderTopColor = "#2D68F0";
   });
 });
 
