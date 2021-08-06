@@ -565,6 +565,13 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   }
 }
 
+@media (min-width: 1440px) {
+  .image-container {
+    position: relative;
+    right: 20rem;
+  }
+}
+
 .planet-img {
   width: 173px;
   height: 173px;
@@ -582,8 +589,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     width: 450px;
     height: 450px;
     margin-top: 5rem;
-    position: relative;
-    right: 20rem;
   }
 }
 
@@ -605,6 +610,16 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     top: 175px;
     width: 135px;
     height: 135px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .geology {
+    position: relative;
+    top: -20px;
+    right: 320px;
+    width: 163px;
+    height: 199px;
   }
 }
 
