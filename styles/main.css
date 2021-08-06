@@ -319,7 +319,7 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
   }
 }
 
@@ -344,8 +344,8 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    position: relative;
-    left: 60px;
+    position: absolute;
+    right: 178px;
   }
 }
 
@@ -581,6 +581,9 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   .planet-img {
     width: 450px;
     height: 450px;
+    margin-top: 5rem;
+    position: relative;
+    right: 20rem;
   }
 }
 
