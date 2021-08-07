@@ -112,49 +112,37 @@ menuBtn.forEach((item) => {
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
 
+      let links = document.querySelectorAll(".btns__container--CTA");
+
       if (planetName.dataset.id == 0) {
-        let links = document.querySelectorAll(".btns__container--CTA");
-        console.log(links);
-        // links.forEach((li) => li.classList.remove("earth"));
         links.forEach((li) => li.classList.toggle("mercury"));
       }
 
       if (planetName.dataset.id == 1) {
-        let links = document.querySelectorAll(".btns__container--CTA");
-        console.log(links);
-        // links.forEach((li) => li.classList.remove("earth"));
         links.forEach((li) => li.classList.toggle("venus"));
       }
 
       if (planetName.dataset.id == 2) {
-        let links = document.querySelectorAll(".btns__container--CTA");
-
         links.forEach((li) => li.classList.toggle("earth"));
       }
 
       if (planetName.dataset.id == 3) {
-        let links = document.querySelectorAll(".btns__container--CTA");
-
         links.forEach((li) => li.classList.toggle("mars"));
       }
 
       if (planetName.dataset.id == 4) {
-        let links = document.querySelectorAll(".btns__container--CTA");
         links.forEach((li) => li.classList.toggle("jupiter"));
       }
 
       if (planetName.dataset.id == 5) {
-        let links = document.querySelectorAll(".btns__container--CTA");
         links.forEach((li) => li.classList.toggle("saturn"));
       }
 
       if (planetName.dataset.id == 6) {
-        let links = document.querySelectorAll(".btns__container--CTA");
         links.forEach((li) => li.classList.toggle("uranus"));
       }
 
       if (planetName.dataset.id == 7) {
-        let links = document.querySelectorAll(".btns__container--CTA");
         links.forEach((li) => li.classList.toggle("neptune"));
       }
 
