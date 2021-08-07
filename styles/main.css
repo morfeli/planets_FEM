@@ -324,6 +324,43 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
   color: #979797;
 }
 
+.tablet-active {
+  border-color: transparent;
+  color: white;
+}
+
+.tablet-active.earth {
+  background-color: #6d2ed5;
+}
+
+.tablet-active.mercury {
+  background-color: #419ebb;
+}
+
+.tablet-active.venus {
+  background-color: #eda249;
+}
+
+.tablet-active.mars {
+  background-color: #d14c32;
+}
+
+.tablet-active.jupiter {
+  background-color: #d83a34;
+}
+
+.tablet-active.saturn {
+  background-color: #cd5120;
+}
+
+.tablet-active.uranus {
+  background-color: #1ec1a2;
+}
+
+.tablet-active.neptune {
+  background-color: #2d68f0;
+}
+
 @media (min-width: 1440px) {
   .main__container {
     display: -webkit-box;
@@ -520,12 +557,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .active {
   color: white;
   border-bottom: 5px solid #6d2ed5;
-  padding-bottom: 1rem;
-}
-
-.tablet-active {
-  color: white;
-  background-color: #6d2ed5;
   padding-bottom: 1rem;
 }
 

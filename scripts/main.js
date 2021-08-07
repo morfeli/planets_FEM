@@ -54,9 +54,9 @@ callToActionBtnsTabletView.forEach((btn) => {
 });
 
 menuBtn.forEach((li) => {
-  li.addEventListener("click", function () {
-    menuBtn.forEach((btn) => btn.classList.remove("li-active"));
-    this.classList.add("li-active");
+  li.addEventListener("click", () => {
+    menuBtn.forEach((el) => el.classList.remove("li-active"));
+    li.classList.add("li-active");
     document.getElementById("mercury").style.borderTopColor = "#419EBB";
     document.getElementById("venus").style.borderTopColor = "#EDA249";
     document.getElementById("earth").style.borderTopColor = "#6D2ED5";
@@ -80,6 +80,19 @@ menuBtn.forEach((item) => {
       btn.classList.remove("tablet-active");
     }
 
+    for (let btn of callToActionBtnsTabletView) {
+      btn.classList.remove(
+        "mercury",
+        "venus",
+        "earth",
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune"
+      );
+    }
+
     let cursor = item.dataset.id;
     planetName.dataset.id = cursor;
 
@@ -91,7 +104,6 @@ menuBtn.forEach((item) => {
       planetImg.src = json[cursor].images.planet;
       overviewBtn.style.borderBottomColor = json[cursor].color;
       overviewBtn.classList.add("active");
-      overviewBtnTabletView.style.backgroundColor = json[cursor].color;
       overviewBtnTabletView.classList.add("tablet-active");
       wikiSource.href = json[cursor].overview.source;
       rotateTime.innerHTML = json[cursor].rotation;
@@ -99,6 +111,52 @@ menuBtn.forEach((item) => {
       radiusTime.innerHTML = json[cursor].radius;
       averageTime.innerHTML = json[cursor].temperature;
       geoImg.classList.remove("geology");
+
+      if (planetName.dataset.id == 0) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        console.log(links);
+        // links.forEach((li) => li.classList.remove("earth"));
+        links.forEach((li) => li.classList.toggle("mercury"));
+      }
+
+      if (planetName.dataset.id == 1) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        console.log(links);
+        // links.forEach((li) => li.classList.remove("earth"));
+        links.forEach((li) => li.classList.toggle("venus"));
+      }
+
+      if (planetName.dataset.id == 2) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+
+        links.forEach((li) => li.classList.toggle("earth"));
+      }
+
+      if (planetName.dataset.id == 3) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+
+        links.forEach((li) => li.classList.toggle("mars"));
+      }
+
+      if (planetName.dataset.id == 4) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        links.forEach((li) => li.classList.toggle("jupiter"));
+      }
+
+      if (planetName.dataset.id == 5) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        links.forEach((li) => li.classList.toggle("saturn"));
+      }
+
+      if (planetName.dataset.id == 6) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        links.forEach((li) => li.classList.toggle("uranus"));
+      }
+
+      if (planetName.dataset.id == 7) {
+        let links = document.querySelectorAll(".btns__container--CTA");
+        links.forEach((li) => li.classList.toggle("neptune"));
+      }
 
       if (planetName.dataset.id == 0) {
         planetImg.style.width = "111px";

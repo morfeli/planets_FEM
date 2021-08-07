@@ -144,7 +144,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 
 .navbar__links--li {
   display: flex;
-
   padding-top: 3rem;
   list-style: none;
   cursor: pointer;
@@ -231,6 +230,43 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
     background-color: $darkgrey;
     color: #979797;
   }
+}
+
+.tablet-active {
+  border-color: transparent;
+  color: white;
+}
+
+.tablet-active.earth {
+  background-color: #6d2ed5;
+}
+
+.tablet-active.mercury {
+  background-color: #419ebb;
+}
+
+.tablet-active.venus {
+  background-color: #eda249;
+}
+
+.tablet-active.mars {
+  background-color: #d14c32;
+}
+
+.tablet-active.jupiter {
+  background-color: #d83a34;
+}
+
+.tablet-active.saturn {
+  background-color: #cd5120;
+}
+
+.tablet-active.uranus {
+  background-color: #1ec1a2;
+}
+
+.tablet-active.neptune {
+  background-color: #2d68f0;
 }
 
 .main__container {
@@ -400,12 +436,6 @@ input[type="checkbox"]:checked ~ .toggle-button .middle {
 .active {
   color: white;
   border-bottom: 5px solid $purple;
-  padding-bottom: 1rem;
-}
-
-.tablet-active {
-  color: white;
-  background-color: $purple;
   padding-bottom: 1rem;
 }
 
